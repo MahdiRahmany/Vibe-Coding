@@ -3,36 +3,33 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/style.css">
     <title>Vibe Coding</title>
   </head>
   <body>
     <div class="timer-container">
       <div class="timer-circle" id="timer-circle"></div>
-      <div class="timer" id="timer">25:00</div>
+      <div class="timer" id="timer" aria-live="polite">25:00</div>
 
-      <!-- دکمه و راهنمای شروع درون یک wrapper برای موقعیت‌یابی دقیق -->
       <div class="focus-wrapper">
-        <button class="focus-button" id="focus-btn">
+        <div class="button-base"></div>
+        <button class="focus-button" id="focus-btn" aria-label="Start/Stop timer">
           Focus
           <span class="focus-light" id="focus-light"></span>
         </button>
-        <!-- راهنمای شروع: تصویر فلش به گونه‌ای قرار گرفته که نوک آن به دکمه اشاره کند -->
         <div class="start-indicator" id="start-indicator">
           <div class="flash-wrapper">
-            <!-- چرخش تصویر به 180 درجه باعث می‌شود نوک تصویر (انتهای آن) به بالا باشد -->
-            <img src="/flash.webp" alt="flash" class="flash">
+            <img src="flash.webp" alt="flash" class="flash">
             <span class="flash-text">Start here</span>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- عنصر صدا برای افکت کلیک -->
     <audio id="click-sound">
-      <source src="/clicked.wav" type="audio/wav" />
+      <source src="clicked.wav" type="audio/wav" />
     </audio>
 
-    <script src="app.js"></script>
+    <script src="/app.js"></script>
   </body>
 </html>
